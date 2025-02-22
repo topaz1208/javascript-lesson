@@ -31,3 +31,143 @@ let template = 'テンプレートリテラル';
 let templateText = `これが${template}です。
 ${template}は改行もできます`
 console.log(templateText);
+
+function getArea() {
+    let radius = 2;
+    let circle = radius * radius * 3.14;
+    console.log('円の面積は' + circle + 'です');
+  }
+  
+  getArea();
+  getArea();
+  getArea();
+
+
+
+
+
+//Q1
+let nickname = 'まりちゃん';
+let age ='ひみつの';
+let Q1 = '私のニックネームは' + nickname + 'です。年齢は' + age +'歳です。';
+console.log(Q1);
+//変数ﾆｯｸﾈｰﾑに自分の名前を代入、変数ageに自分の年齢を代入し、
+//文字連結を使用して変数Q1に文章を代入しコンソールに出力
+
+
+//Q2
+let languages = ['JavaScript', 'PHP', 'Ruby', 'Python',  'Go' ]
+let Q2 = `私の好きな言語は${languages[0]}です。次は${languages[3]}を勉強してみたいです。`
+console.log(Q2)
+//変数languagesのｲﾝﾃﾞｯｸｽ0-4にそれぞれ'JavaScript', 'PHP', 'Ruby', 'Python',  'Go'を代入して、
+//テンプレートリテラルを用いて変数Q2に文章を代入しコンソールに出力
+
+
+//Q3
+//let user = {
+//  name: 'John',
+//  age: 26,
+//  bloodType: 'A',
+//  favorite: 'card',
+//};
+//console.log(user.age);
+//変数userのｲﾝﾃﾞｯｸｽ0-4に代入したデータにオブジェクトを定義してﾌﾟﾛﾊﾟﾃｨageをコンソールに出力
+
+//Q4
+let playerList = [
+    {
+      name: 'John',
+      age: 26,
+      favorites: ['Card Game', 'Basket Ball', 'Programming'],
+    },
+    {
+      name: 'Bob',
+      age: 33,
+      favorites: ['Tinder', 'The Legend of Zelda'],
+    },
+    {
+      name: 'Michael',
+      age: 22,
+      favorites: ['Football', 'Smash Bros.'],
+    }
+  ];
+  console.log(playerList[1].favorites[1])
+  //変数playerListのｲﾝﾃﾞｯｸｽ0-2に代入したデータにそれぞれオブジェクトを定義
+  //変数playerListのｲﾝﾃﾞｯｸｽ1のkey:favoritesnのﾊﾞﾘｭｰｲﾝﾃﾞｯｸｽ1をコンソールに出力
+
+
+  //Q5
+console.log((playerList[0].age+playerList[1].age+playerList[2].age)/3)
+//変数playerListのｲﾝﾃﾞｯｸｽ0-2のageを加算して3で割って平均値を出している
+
+//Q6
+function sayHello(){
+  let Hello = 'Hello'
+  console.log(Hello)
+}
+sayHello();
+//Helloとｺﾝｿｰﾙに出力する関数sayHelloを定義し呼び出し
+const sayWorld = function(){
+  let sayWorld = 'World'
+console.log(sayWorld)
+}
+sayWorld();
+//Worldとｺﾝｿｰﾙに出力する無名関数sayWorldを定義し呼び出し
+
+//Q7 オブジェクトに持たせた関数をメソッドという
+let user = {
+  name: 'John',
+  age: 26,
+  bloodType: 'A',
+  favorite: 'card',
+  birthday:'2000-09-27',
+  sayHello: function(){
+    console.log('Hello！');
+  }
+};
+sayHello();
+
+//Q8
+let calc = {
+add: function(x, y){
+  console.log( x + y );
+},
+subtract: function(x, y){
+  console.log(x - y);
+},
+multiply:function(x, y){
+  console.log(x * y);
+},
+divide:function(x, y){
+  console.log(x / y);
+}
+};
+
+calc.add(5,2)
+calc.subtract(20, 10)
+calc.multiply(7, 7)
+calc.divide(25, 5)
+
+//Q9
+function remainder(x, y){
+  let result = x % y;
+  console.log( x + 'を' + y + 'で割った余りは' + result + 'です');
+  return x % y ; 
+}
+remainder(5, 3)
+
+//Q10
+function foo() {
+let x = 1;
+}
+console.log(x);
+
+//変数xはスコープが関数内のため、関数外にあるconsoleでは変数xが参照できずにエラーが出力される。
+//関数外で出力を行いたい場合は、変数xの定義を関数外で行い、関数内で変数xの値を再代入するようにする。
+let x = 0;
+foo();
+function foo() {
+    x = 1;
+  }
+  console.log(x);
+
