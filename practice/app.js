@@ -171,3 +171,44 @@ function foo() {
   }
   console.log(x);
 
+//Q1
+var random = Math.floor(Math.random() * 11)
+console.log(random );
+//Math.random 0-1未満の小数による乱数を生成する
+//Math.floor 小数点以下を切り捨てる
+
+
+//Q2 
+function HelloWorld(){
+    console.log('Hello World!');
+};
+setTimeout(HelloWorld, 3000)
+
+//Q3
+let num = 0 ;
+if(num < 0){
+    console.log('num is greater than 0');
+}else if(num > 0){
+    console.log('num is less than 0');
+}else{
+console.log('num is 0');
+}
+
+//Q4 
+let numbers = [];
+for (let i = 0; i < 100; i++ ){
+  numbers[numbers.length] = i;
+};
+console.log( numbers );
+
+//Q5
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+for (let i = 0; i < mixed.length; i++){
+   if(typeof mixed[i] === 'number'){
+    console.log(mixed[i] % 2 === 0 ? 'even' : 'odd');
+  }else{
+    console.log('not number');
+  }  
+}; 
+//変数iでｲﾝﾃﾞｯｸｽにｱｸｾｽ（ｲﾝﾃﾞｯｸｽの数を指定）
+//lengthで配列の要素数（長さ、配列がいくつか）を出す。

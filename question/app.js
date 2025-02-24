@@ -11,12 +11,12 @@ console.log(Q2)
 
 
 //Q3
-//let user = {
-  //  name: 'John',
-  //  age: 26,
-  //  bloodType: 'A',
-  //  favorite: 'card',
-//};
+let user = {
+  name: 'John',
+  age: 26,
+  bloodType: 'A',
+  favorite: 'card',
+};
 
 //Q4
 let playerList = [
@@ -97,20 +97,15 @@ function remainder(x, y){
 remainder(5, 3)
 
 //Q10
-//function foo() {
-//let x = 1;
-//}
-//console.log(x);
-
-//変数xはスコープが関数内のため、関数外にあるconsoleでは変数xが参照できずにエラーが出力される。
+function foo() {
+let x = 1;
+}
+console.log(x);
 
 //応用
 //Q1
 var random = Math.floor(Math.random() * 11)
 console.log(random );
-//Math.random 0-1未満の小数による乱数を生成する
-//Math.floor 小数点以下を切り捨てる
-
 
 //Q2 
 function HelloWorld(){
@@ -128,9 +123,21 @@ if(num < 0){
 console.log('num is 0');
 }
 
-//Q4
-
+//Q4 
+let numbers = [];
+for (let i = 0; i < 100; i++ ){
+  numbers[numbers.length] = i;
+};
+console.log( numbers );
 
 //Q5
-
-
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+for (let i = 0; i < mixed.length; i++){
+   if(typeof mixed[i] === 'number'){
+    console.log(mixed[i] % 2 === 0 ? 'even' : 'odd');
+  }else{
+    console.log('not number');
+  }  
+}; 
+//変数iでｲﾝﾃﾞｯｸｽにｱｸｾｽ（ｲﾝﾃﾞｯｸｽの数を指定）
+//lengthで配列の要素数（長さ、配列がいくつか）を出す。
