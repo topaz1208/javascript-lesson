@@ -55,7 +55,7 @@ console.log(sayWorld)
 sayWorld();
 
 //Q7 
-let user = {
+let updateuser = {
   name: 'John',
   age: 26,
   bloodType: 'A',
@@ -101,6 +101,8 @@ function foo() {
 let x = 1;
 }
 console.log(x);
+//変数xはスコープが関数内のため、関数外にあるconsoleでは変数xが参照できずにエラーが出力される。
+//関数外で出力を行いたい場合は、変数xの定義を関数外で行い、関数内で変数xの値を再代入するようにする。
 
 //応用
 //Q1
@@ -139,5 +141,3 @@ for (let i = 0; i < mixed.length; i++){
     console.log('not number');
   }  
 }; 
-//変数iでｲﾝﾃﾞｯｸｽにｱｸｾｽ（ｲﾝﾃﾞｯｸｽの数を指定）
-//lengthで配列の要素数（長さ、配列がいくつか）を出す。

@@ -16,14 +16,15 @@ console.log(Q2)
 
 
 //Q3
-//let user = {
-//  name: 'John',
-//  age: 26,
-//  bloodType: 'A',
-//  favorite: 'card',
-//};
-//console.log(user.age);
-//変数userのｲﾝﾃﾞｯｸｽ0-4に代入したデータにオブジェクトを定義してﾌﾟﾛﾊﾟﾃｨageをコンソールに出力
+let user = {
+name: 'John',
+age: 26,
+bloodType: 'A',
+favorite: 'card',
+};
+console.log(user.age);
+//変数userのｲﾝﾃﾞｯｸｽ0-4に代入したデータにオブジェクトを定義してﾌﾟﾛﾊﾟﾃｨを持たせて、
+//ｷｰageのﾊﾞﾘｭｰ26をコンソールに出力
 
 //Q4
 let playerList = [
@@ -44,11 +45,11 @@ let playerList = [
     }
   ];
   console.log(playerList[1].favorites[1])
-  //変数playerListのｲﾝﾃﾞｯｸｽ0-2に代入したデータにそれぞれオブジェクトを定義
+  //変数playerListのｲﾝﾃﾞｯｸｽ0-2にそれぞれオブジェクトを定義
   //変数playerListのｲﾝﾃﾞｯｸｽ1のkey:favoritesnのﾊﾞﾘｭｰｲﾝﾃﾞｯｸｽ1をコンソールに出力
 
 
-  //Q5
+//Q5
 console.log((playerList[0].age+playerList[1].age+playerList[2].age)/3)
 //変数playerListのｲﾝﾃﾞｯｸｽ0-2のageを加算して3で割って平均値を出している
 
@@ -59,14 +60,19 @@ function sayHello(){
 }
 sayHello();
 //Helloとｺﾝｿｰﾙに出力する関数sayHelloを定義し呼び出し
+
 const sayWorld = function(){
   let sayWorld = 'World'
 console.log(sayWorld)
 }
 sayWorld();
-//Worldとｺﾝｿｰﾙに出力する無名関数sayWorldを定義し呼び出し
 
-//Q7 オブジェクトに持たせた関数をメソッドという
+//Worldとｺﾝｿｰﾙに出力する無名関数sayWorldを定義し呼び出し、関数sayHelloを定義、変数Helloに値を代入しｺﾝｿｰﾙﾛｸﾞで出力
+//無名関数を変数sayWorldに代入し、変数sayWorldにWorldを代入してｺﾝｿｰﾙに出力
+//変数名が関数名と同じだから変数名変えた方がいいかも
+//sayWorldの宣言が関数内なのでﾛｰｶﾙ変数になっている　注意
+
+//Q7 
 let user = {
   name: 'John',
   age: 26,
@@ -78,6 +84,9 @@ let user = {
   }
 };
 sayHello();
+//オブジェクトに持たせた関数をメソッドという
+//Q3で定義した変数useにbirthdayﾌﾟﾛﾊﾟﾃｨを追加
+//
 
 //Q8
 let calc = {
