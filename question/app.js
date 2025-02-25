@@ -106,7 +106,7 @@ console.log(x);
 
 //応用
 //Q1
-var random = Math.floor(Math.random() * 11)
+var random = Math.floor(Math.random() * 10)
 console.log(random );
 
 //Q2 

@@ -46,7 +46,7 @@ let playerList = [
   ];
   console.log(playerList[1].favorites[1])
   //変数playerListのｲﾝﾃﾞｯｸｽ0-2にそれぞれオブジェクトを定義
-  //変数playerListのｲﾝﾃﾞｯｸｽ1のkey:favoritesnのﾊﾞﾘｭｰｲﾝﾃﾞｯｸｽ1をコンソールに出力
+  //変数playerListのｲﾝﾃﾞｯｸｽ1のkey:favoritesnのﾊﾞﾘｭｰ　ｲﾝﾃﾞｯｸｽ1をコンソールに出力
 
 
 //Q5
@@ -59,7 +59,6 @@ function sayHello(){
   console.log(Hello)
 }
 sayHello();
-//Helloとｺﾝｿｰﾙに出力する関数sayHelloを定義し呼び出し
 
 const sayWorld = function(){
   let sayWorld = 'World'
@@ -67,13 +66,15 @@ console.log(sayWorld)
 }
 sayWorld();
 
+//Helloとｺﾝｿｰﾙに出力する関数sayHelloを定義し呼び出し。
 //Worldとｺﾝｿｰﾙに出力する無名関数sayWorldを定義し呼び出し、関数sayHelloを定義、変数Helloに値を代入しｺﾝｿｰﾙﾛｸﾞで出力
 //無名関数を変数sayWorldに代入し、変数sayWorldにWorldを代入してｺﾝｿｰﾙに出力
 //変数名が関数名と同じだから変数名変えた方がいいかも
 //sayWorldの宣言が関数内なのでﾛｰｶﾙ変数になっている　注意
+//定数（再代入不可）になっているのでletでもいい
 
 //Q7 
-let user = {
+let updateuser = {
   name: 'John',
   age: 26,
   bloodType: 'A',
@@ -86,7 +87,7 @@ let user = {
 sayHello();
 //オブジェクトに持たせた関数をメソッドという
 //Q3で定義した変数useにbirthdayﾌﾟﾛﾊﾟﾃｨを追加
-//
+//メソッドsayHelloを追加し、キーを指定して呼び出し
 
 //Q8
 let calc = {
@@ -104,18 +105,23 @@ divide:function(x, y){
 }
 };
 
-calc.add(5,2)
-calc.subtract(20, 10)
-calc.multiply(7, 7)
-calc.divide(25, 5)
+calc.add(5,2)　//xとyの和をコンソールに出力するメソッドaddを定義
+calc.subtract(20, 10)//xとyの差をコンソールに出力するメソッドsubtractを定義
+calc.multiply(7, 7)//xとyの積をコンソールに出力するメソッドfunctionを定義
+calc.divide(25, 5)//xとyの商をコンソールに出力するメソッドconsoleを定義
 
-//Q9
+
+//Q9　2 つの引数 x, y を受け取り、x を y で割った剰余を返り値とする関数 remainder を定義し、
+//5 と 3 を引数に渡して実行した返り値を用いて文字列連結で以下のようにコンソールに出力してください。
 function remainder(x, y){
   let result = x % y;
   console.log( x + 'を' + y + 'で割った余りは' + result + 'です');
   return x % y ; 
 }
 remainder(5, 3)
+//引数x、yを受け取る関数reminderを定義し
+//変数resultにxyを割る式を定義
+
 
 //Q10
 function foo() {
@@ -133,10 +139,11 @@ function foo() {
   console.log(x);
 
 //Q1
-var random = Math.floor(Math.random() * 11)
+var random = Math.floor(Math.random() * 10)
 console.log(random );
 //Math.random 0-1未満の小数による乱数を生成する
 //Math.floor 小数点以下を切り捨てる
+//*11をかけて０−９になるようにしているけど*10でよくね？となっています
 
 
 //Q2 
@@ -144,6 +151,7 @@ function HelloWorld(){
     console.log('Hello World!');
 };
 setTimeout(HelloWorld, 3000)
+//なんで１秒1000だっけ
 
 //Q3
 let num = 0 ;
@@ -154,6 +162,7 @@ if(num < 0){
 }else{
 console.log('num is 0');
 }
+//if 条件分岐
 
 //Q4 
 let numbers = [];
@@ -161,6 +170,8 @@ for (let i = 0; i < 100; i++ ){
   numbers[numbers.length] = i;
 };
 console.log( numbers );
+//for 繰り返し処理
+//length＝配列変数の数
 
 //Q5
 let mixed = [4, '2', 5, '8', '9', 0, 1];
@@ -173,3 +184,4 @@ for (let i = 0; i < mixed.length; i++){
 }; 
 //変数iでｲﾝﾃﾞｯｸｽにｱｸｾｽ（ｲﾝﾃﾞｯｸｽの数を指定）
 //lengthで配列の要素数（長さ、配列がいくつか）を出す。
+//変数を作って欲しいって言われた
